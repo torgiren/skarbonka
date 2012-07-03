@@ -1,0 +1,42 @@
+h1 {
+	color: red;
+	font-family: cursive;
+}
+body {
+	background: lightgray;
+}
+.title {
+	text-align: center;
+}
+nav {
+	float: left;
+	width: 12em;
+}
+footer {
+	clear: both;
+	text-align: center;
+}
+.kotek {
+	width: 10em;
+}
+.table {
+	border-width: 1px;
+	border-spacing: 2px;
+	border-style: outset;
+	border-color: gray;
+	border-collapse: separate;
+}
+.table th {
+	border-width: 1px;
+	padding: 1px;
+	border-style: inset;
+	-moz-border-radius: ;
+	text-align:left;
+}
+.table td {
+	border-width: 1px;
+	padding: 1px;
+	border-style: inset;
+	-moz-border-radius: ;
+	min-width: 1em;
+}

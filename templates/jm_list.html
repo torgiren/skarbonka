@@ -1,0 +1,16 @@
+{% extends 'jm.html' %}
+
+{% block list %}
+Lista:
+<table class='table'>
+<tr><th>lp</th><th>nazwa</th></tr>
+{% for item in jm %}
+<tr><td>{{ forloop.counter }}</td><td>{{ item }}</td>
+	<td><a href="/jm/edit/{{ item.id }}"><img src="/static/edit.png"/></a></td>
+	<td><a href="/jm/delete/{{ item.id }}"><img src="/static/delete.gif"/></a></td>
+	</tr>
+{% endfor %}
+<tr><td></td><td></td><td></td><td><a href="/jm/add/"><img src="/static/add.png"/></a></td></tr>
+</table>
+{% endblock %}
+

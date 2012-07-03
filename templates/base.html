@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>
+Skarbonka - by TORGiren
+</title>
+</head>
+<body>
+<header>
+<h1 style="float: left;text-align:right;width:55%"  class='title'>Skarbonka</h1>
+<img height=70em src="/static/skarbonka.png"/>
+</header>
+<div style="clear: both"></div>
+<nav>
+{% block menu %}
+<ul>
+<li><a href="/">Strona glowna</a></li>
+<li>Paragony</li>
+<li>Towary</li>
+<li>Sklepy</li>
+<li><a href="/jm">Jednostki miary</a></li>
+<li>Miasta</li>
+</ul>
+{% endblock %}
+<img class='kotek' src="/static/cat22.png"/>
+</nav>
+<article>
+{% block content %}
+{% endblock %}
+</article>
+<footer>
+Skarbonka by TORGiren
+</footer>
+</body>
+</html

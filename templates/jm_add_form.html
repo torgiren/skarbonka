@@ -1,0 +1,17 @@
+{% extends 'jm.html' %}
+
+{% block list %}
+{% if form.errors %}
+	<p style="color:red;">
+		Wykryto błędy
+	</p>
+{% endif %}
+<form action="/jm/{{ action }}/" method="POST">
+{% csrf_token %}
+	<table>
+		{{ form.as_table }}
+	</table>
+	<input type="hidden" name="id" value="{{ id }}"/>
+	<input type="submit" value="Dodaj">
+</form>
+{% endblock %}
