@@ -1,6 +1,9 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
-from skarbonka.views import *
+from skarbonka.views import common
+from skarbonka.views import jm
+from skarbonka.views import miasto
+from skarbonka.views import sklep
 admin.autodiscover()
 
 # Uncomment the next two lines to enable the admin:
@@ -15,6 +18,18 @@ urlpatterns = patterns('',
 	(r'^jm/edit/(\d)/$',jm.jmEdit),
 	(r'^jm/edit/$',jm.jmEdit),
 	(r'^jm/delete/(\d)/$',jm.jmDel),
+	
+	(r'^miasto/$',miasto.miastoPage),
+	(r'^miasto/add/$',miasto.miastoAdd),
+	(r'^miasto/edit/$',miasto.miastoEdit),
+	(r'^miasto/edit/(\d)/$',miasto.miastoEdit),
+	(r'^miasto/delete/(\d)$',miasto.miastoDel),
+
+	(r'^sklep/$',sklep.SklepPage),
+	(r'^sklep/add/$',sklep.SklepAdd),
+	(r'^sklep/edit/(\d)/$',sklep.SklepEdit),
+	(r'^sklep/delete/(\d)/$',sklep.SklepDel),
+
 	(r'^admin/',include(admin.site.urls)),
     # Examples:
     # url(r'^$', 'skarbonka.views.home', name='home'),

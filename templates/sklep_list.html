@@ -1,0 +1,16 @@
+{% extends 'sklep.html' %}
+
+{% block list %}
+Lista:
+<table class='table'>
+<tr><th>lp</th><th>nazwa</th><th>adres</th></tr>
+{% for item in sklepy %}
+<tr><td>{{ forloop.counter }}</td><td>{{ item.nazwa }}</td><td>{{ item.miasto.nazwa }}, {{ item.adres }}</td>
+	<td><a href="/sklep/edit/{{ item.id }}"><img src="/static/edit.png"/></a></td>
+	<td><a href="/sklep/delete/{{ item.id }}"><img src="/static/delete.gif"/></a></td>
+	</tr>
+{% endfor %}
+<tr><td></td><td></td><td></td><td></td><td></td><td><a href="/sklep/add/"><img src="/static/add.png"/></a></td></tr>
+</table>
+{% endblock %}
+

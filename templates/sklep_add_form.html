@@ -1,4 +1,4 @@
-{% extends 'jm.html' %}
+{% extends 'sklep.html' %}
 
 {% block list %}
 {% if form.errors %}
@@ -6,7 +6,7 @@
 		Wykryto błędy
 	</p>
 {% endif %}
-<form action="/jm/{{ action }}/" method="POST">
+<form action="/sklep/{{ action }}/{% if id %}{{ id }}/{% endif %}" method="POST">
 {% csrf_token %}
 	<table>
 		{{ form.as_table }}

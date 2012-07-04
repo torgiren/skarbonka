@@ -12,7 +12,8 @@ def jmAdd(request):
 		form=JMForm(request.POST)
 		if form.is_valid():
 			cd=form.cleaned_data
-			jm=JM(nazwa=cd['nazwa'])
+#			jm=JM(nazwa=cd['nazwa'])
+			jm=JM(**cd)
 			jm.save()
 		return HttpResponseRedirect('/jm/')
 	else:

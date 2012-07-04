@@ -6,7 +6,7 @@
 		Wykryto błędy
 	</p>
 {% endif %}
-<form action="/jm/{{ action }}/" method="POST">
+<form action="/miasto/{{ action }}/" method="POST">
 {% csrf_token %}
 	<table>
 		{{ form.as_table }}

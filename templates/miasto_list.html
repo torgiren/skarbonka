@@ -1,0 +1,16 @@
+{% extends 'miasto.html' %}
+
+{% block list %}
+Lista:
+<table class='table'>
+<tr><th>lp</th><th>nazwa</th></tr>
+{% for item in miasto %}
+<tr><td>{{ forloop.counter }}</td><td>{{ item }}</td>
+	<td><a href="/miasto/edit/{{ item.id }}"><img src="/static/edit.png"/></a></td>
+	<td><a href="/miasto/delete/{{ item.id }}"><img src="/static/delete.gif"/></a></td>
+	</tr>
+{% endfor %}
+<tr><td></td><td></td><td></td><td><a href="/miasto/add/"><img src="/static/add.png"/></a></td></tr>
+</table>
+{% endblock %}
+
