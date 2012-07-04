@@ -8,12 +8,13 @@ admin.autodiscover()
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-	(r'^$',mainPage),
-	(r'^jm/$',jmPage),
-	(r'^jm/add/$',jmAdd),
-	(r'^jm/edit/(\d)/$',jmEdit),
-	(r'^jm/edit/$',jmEdit),
-	(r'^jm/delete/(\d)/$',jmDel),
+	(r'^$',common.mainPage),
+#	(r'^$',mainPage),
+	(r'^jm/$',jm.jmPage),
+	(r'^jm/add/$',jm.jmAdd),
+	(r'^jm/edit/(\d)/$',jm.jmEdit),
+	(r'^jm/edit/$',jm.jmEdit),
+	(r'^jm/delete/(\d)/$',jm.jmDel),
 	(r'^admin/',include(admin.site.urls)),
     # Examples:
     # url(r'^$', 'skarbonka.views.home', name='home'),

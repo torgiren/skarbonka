@@ -3,9 +3,7 @@ from django.http import HttpResponseRedirect
 from skarbonka.towary.models import *
 from skarbonka.forms import *
 from django.forms.models import model_to_dict
-
-def mainPage(request):
-	return render_to_response('main.html',{})
+from skarbonka.views.jm import *
 def jmPage(request):
 	jm=JM.objects.all()
 	return render_to_response('jm_list.html',{'jm':jm})
