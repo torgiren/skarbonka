@@ -4,6 +4,7 @@ from skarbonka.views import common
 from skarbonka.views import jm
 from skarbonka.views import miasto
 from skarbonka.views import sklep
+from skarbonka.views import towar
 admin.autodiscover()
 
 # Uncomment the next two lines to enable the admin:
@@ -29,6 +30,11 @@ urlpatterns = patterns('',
 	(r'^sklep/add/$',sklep.SklepAdd),
 	(r'^sklep/edit/(\d)/$',sklep.SklepEdit),
 	(r'^sklep/delete/(\d)/$',sklep.SklepDel),
+
+	(r'^towar/$',towar.TowarPage),
+	(r'^towar/add/$',towar.TowarAdd),
+	(r'^towar/edit/(\d)/$',towar.TowarEdit),
+	(r'^towar/delete/(\d)/$',towar.TowarDel),
 
 	(r'^admin/',include(admin.site.urls)),
     # Examples:

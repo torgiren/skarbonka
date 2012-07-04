@@ -1,0 +1,16 @@
+{% extends 'towar.html' %}
+
+{% block list %}
+Lista:
+<table class='table'>
+<tr><th>lp</th><th>nazwa</th><th>adres</th></tr>
+{% for item in towary %}
+<tr><td>{{ forloop.counter }}</td><td>{{ item.nazwa }}</td><td>{{ item.jm.nazwa }}</td>
+	<td><a href="/towar/edit/{{ item.id }}"><img src="/static/edit.png"/></a></td>
+	<td><a href="/towar/delete/{{ item.id }}"><img src="/static/delete.gif"/></a></td>
+	</tr>
+{% endfor %}
+<tr><td></td><td></td><td></td><td></td><td><a href="/towar/add/"><img src="/static/add.png"/></a></td></tr>
+</table>
+{% endblock %}
+

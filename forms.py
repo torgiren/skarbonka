@@ -9,4 +9,6 @@ class SklepForm(forms.Form):
 	nazwa=forms.CharField()
 	adres=forms.CharField()
 	miasto=forms.ModelChoiceField(Miasta.objects)
-	
+class TowarForm(forms.Form):
+	nazwa=forms.CharField()
+	jm=forms.ModelChoiceField(JM.objects)
