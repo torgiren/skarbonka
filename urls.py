@@ -5,6 +5,7 @@ from skarbonka.views import jm
 from skarbonka.views import miasto
 from skarbonka.views import sklep
 from skarbonka.views import towar
+from skarbonka.views import paragon
 admin.autodiscover()
 
 # Uncomment the next two lines to enable the admin:
@@ -35,6 +36,9 @@ urlpatterns = patterns('',
 	(r'^towar/add/$',towar.TowarAdd),
 	(r'^towar/edit/(\d)/$',towar.TowarEdit),
 	(r'^towar/delete/(\d)/$',towar.TowarDel),
+
+	(r'^paragon/$',paragon.ParagonPage),
+	(r'^paragon/add/$',paragon.ParagonAdd),
 
 	(r'^admin/',include(admin.site.urls)),
     # Examples:

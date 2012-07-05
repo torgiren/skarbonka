@@ -1,0 +1,12 @@
+{% extends 'paragon.html' %}
+
+{% block list %}
+Lista:
+<table class='table'>
+<tr><th>lp</th><th>Sklep</th><th>Data</th><th>Wartosc</th></tr>
+{% for item in paragony %}
+<tr><td>{{ forloop.counter }}</td><td>{{ item.sklep.nazwa }}</td><td>{{ item.data }}</td><td>{{ item.val }}</td></tr>
+{% endfor %}
+</table>
+
+{% endblock %}
